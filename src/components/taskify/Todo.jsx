@@ -95,6 +95,7 @@ const Todo = () => {
   };
   return (
     <div>
+      <h1>Taskify</h1>
       <div className="row">
         <div className="col-12 col-lg-6">
           <h2>Form</h2>
