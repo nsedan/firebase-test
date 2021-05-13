@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Rubik:wght@700&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+}

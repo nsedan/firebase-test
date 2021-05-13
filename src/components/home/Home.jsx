@@ -6,7 +6,14 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Link className="btn btn-secondary btn-block mt-5" to="/taskify">Taskify</Link>
+      <ul className="mt-5">
+        <Link className="btn btn-secondary btn-block" to="/taskify">
+          Taskify
+        </Link>
+        <Link className="btn btn-secondary btn-block" to="/quizzer">
+          Quizzer
+        </Link>
+      </ul>
     </div>
   );
 };
