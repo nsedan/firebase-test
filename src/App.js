@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css'
-import Todo from "./components/taskify/Todo";
-import Home from "./components/home/Home";
-import Quizzer from "./components/quizzer/Quizzer";
+import Todo from "./apps/taskify/Todo";
+import Home from "./apps/home/Home";
+import Quizzer from "./apps/quizzer/Quizzer";
 
 function App() {
   return (
