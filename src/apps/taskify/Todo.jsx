@@ -8,7 +8,6 @@ const Todo = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [list, setList] = useState("");
-  const [error, setError] = useState([]);
   const [editMode, setEditMode] = useState(false);
 
   useEffect(() => {
@@ -22,12 +21,6 @@ const Todo = () => {
 
   const setCustomers = async (e) => {
     e.preventDefault();
-    if (!name.trim()) {
-      setError("Name field is empty");
-    }
-    if (!phone.trim()) {
-      setError("Phone field is empty");
-    }
     const customer = {
       name: name,
       phone: phone,
@@ -70,12 +63,6 @@ const Todo = () => {
 
   const setUpdate = async (e) => {
     e.preventDefault();
-    if (!name.trim()) {
-      setError("Name field is empty");
-    }
-    if (!phone.trim()) {
-      setError("Phone field is empty");
-    }
     const updatedCustomer = {
       name: name,
       phone: phone,
@@ -105,19 +92,23 @@ const Todo = () => {
           >
             <input
               value={name}
+              placeholder="Name"
               onChange={(e) => {
                 setName(e.target.value);
               }}
               className="form-control mt-3"
               type="text"
+              required
             />
             <input
               value={phone}
+              placeholder="Phone"
               onChange={(e) => {
                 setPhone(e.target.value);
               }}
               className="form-control mt-3"
               type="text"
+              required
             />
             {editMode ? (
               <input
@@ -133,13 +124,6 @@ const Todo = () => {
               />
             )}
           </form>
-          {error ? (
-            <div>
-              <p>{error}</p>
-            </div>
-          ) : (
-            <span></span>
-          )}
         </div>
         <div className="col-12 col-lg-6">
           <h2>List</h2>
