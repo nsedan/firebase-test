@@ -7,8 +7,8 @@ const Home = () => {
     <div>
       <Header />
       <ul className="mt-5">
-        <Link className="btn btn-secondary btn-block" to="/taskify">
-          Taskify
+        <Link className="btn btn-secondary btn-block" to="/customers">
+          Customers
         </Link>
         <Link className="btn btn-secondary btn-block" to="/quizzer">
           Quizzer
