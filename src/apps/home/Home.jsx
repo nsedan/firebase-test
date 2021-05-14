@@ -4,9 +4,9 @@ import Header from "./Header";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
-      <ul className="mt-5">
+      <div className="mt-5">
         <Link className="btn btn-secondary btn-block" to="/customers">
           Customers
         </Link>
@@ -16,8 +16,8 @@ const Home = () => {
         <Link className="btn btn-secondary btn-block" to="/quizzer">
           Quizzer
         </Link>
-      </ul>
-    </div>
+      </div>
+    </>
   );
 };
 

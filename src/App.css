@@ -2,8 +2,18 @@
 
 * {
   font-family: "Open Sans", sans-serif;
+  color: white;
 }
 
 h1 {
   font-family: "Rubik", sans-serif;
+}
+
+html,
+#root {
+  background-color: #00356b;
+}
+
+.list-group-item{
+  color: #333;
 }

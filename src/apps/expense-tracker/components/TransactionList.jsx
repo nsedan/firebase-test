@@ -15,7 +15,7 @@ const TransactionList = () => {
             <Transaction key={transaction.id} transaction={transaction} />
           ))
         ) : (
-          <small>Nothing to show.</small>
+          <small className="pl-3">Nothing to show.</small>
         )}
       </ul>
     </>
