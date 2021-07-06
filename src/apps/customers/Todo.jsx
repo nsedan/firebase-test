@@ -9,10 +9,13 @@ const Todo = () => {
   const [phone, setPhone] = useState("");
   const [list, setList] = useState("");
   const [editMode, setEditMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const getCustomers = async () => {
+      setIsLoading(true);
       const { docs } = await store.collection("customers").get();
+      setIsLoading(false);
       const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
       setList(newArray);
     };
@@ -26,8 +29,10 @@ const Todo = () => {
       phone: phone,
     };
     try {
+      setIsLoading(true);
       await store.collection("customers").add(customer);
       const { docs } = await store.collection("customers").get();
+      setIsLoading(false);
       const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
       setList(newArray);
       setName("");
@@ -39,8 +44,10 @@ const Todo = () => {
 
   const deleteCustomer = async (id) => {
     try {
+      setIsLoading(true);
       await store.collection("customers").doc(id).delete();
       const { docs } = await store.collection("customers").get();
+      setIsLoading(false);
       const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
       setList(newArray);
     } catch (e) {
@@ -68,8 +75,10 @@ const Todo = () => {
       phone: phone,
     };
     try {
+      setIsLoading(true);
       await store.collection("customers").doc(customerId).set(updatedCustomer);
       const { docs } = await store.collection("customers").get();
+      setIsLoading(false);
       const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
       setList(newArray);
       setName("");
@@ -128,7 +137,13 @@ const Todo = () => {
         <div className="col-12 col-lg-6">
           <h2>List</h2>
           <ul className="list-group">
-            {list.length !== 0 ? (
+            {isLoading ? (
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border text-light" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
+              </div>
+            ) : list.length !== 0 ? (
               list.map((item) => (
                 <li className="list-group-item" key={item.id}>
                   {item.name} - {item.phone}

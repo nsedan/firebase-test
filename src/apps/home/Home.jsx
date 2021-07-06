@@ -13,9 +13,6 @@ const Home = () => {
         <Link className="btn btn-secondary btn-block" to="/expense-tracker">
           Expense Tracker
         </Link>
-        <Link className="btn btn-secondary btn-block" to="/quizzer">
-          Quizzer
-        </Link>
       </div>
     </>
   );
