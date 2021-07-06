@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { store } from "../../firebase/config";
 
-const Todo = () => {
+const Customers = () => {
   const [customerId, setCustomerId] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -124,12 +124,14 @@ const Todo = () => {
                 type="submit"
                 value="Save"
                 className="btn btn-dark btn-block mt-3"
+                disabled={isLoading && "disabled"}
               />
             ) : (
               <input
                 type="submit"
                 value="Submit"
                 className="btn btn-dark btn-block mt-3"
+                disabled={isLoading && "disabled"}
               />
             )}
           </form>
@@ -138,10 +140,8 @@ const Todo = () => {
           <h2>List</h2>
           <ul className="list-group">
             {isLoading ? (
-              <div class="d-flex justify-content-center">
-                <div class="spinner-border text-light" role="status">
-                  <span class="visually-hidden"></span>
-                </div>
+              <div className="d-flex justify-content-center">
+                <div className="spinner-border text-light" role="status"></div>
               </div>
             ) : list.length !== 0 ? (
               list.map((item) => (
@@ -178,4 +178,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default Customers;

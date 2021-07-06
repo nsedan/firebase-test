@@ -1,6 +1,6 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Todo from "./apps/customers/Todo";
+import Customers from "./apps/customers/Customers";
 import Home from "./apps/home/Home";
 import ExpenseTracker from "./apps/expense-tracker/ExpenseTracker";
 
@@ -12,7 +12,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/customers" exact>
-          <Todo />
+          <Customers />
         </Route>
         <Route path="/expense-tracker" exact>
           <ExpenseTracker />
