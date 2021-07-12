@@ -2,18 +2,18 @@
 
 * {
   font-family: "Open Sans", sans-serif;
-  color: white;
+  color: #fff;
+}
+
+body {
+  margin: 0;
 }
 
 h1 {
   font-family: "Rubik", sans-serif;
 }
 
-html,
-#root {
-  background-color: #00356b;
-}
-
-.list-group-item{
-  color: #333;
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1f2c3b 0%, #090a0f 100%);
 }

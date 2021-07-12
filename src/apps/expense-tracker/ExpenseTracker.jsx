@@ -1,29 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./ExpenseTracker.css";
+
+import GlobalProvider from "./context/GlobalState";
 import Header from "./components/Header";
 import Balance from "./components/Balance";
 import IncomeExpenses from "./components/IncomeExpenses";
 import TransactionList from "./components/TransactionList";
 import AddTransaction from "./components/AddTransaction";
 
-import GlobalProvider from "./context/GlobalState";
+import classes from "./ExpenseTracker.module.css";
 
 const ExpenseTracker = () => {
   return (
-    <div className="tracker">
+    <div className={classes.tracker}>
       <GlobalProvider>
         <Header />
-        <div className="tracker-box">
+        <div className={classes.trackerBox}>
           <Balance />
           <IncomeExpenses />
           <TransactionList />
           <AddTransaction />
         </div>
       </GlobalProvider>
-      <Link className="btn btn-secondary btn-block mt-5" to="/">
-        Home
-      </Link>
     </div>
   );
 };

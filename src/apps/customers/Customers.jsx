@@ -1,7 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { store } from "../../firebase/config";
+
+import classes from "./Customers.module.css";
 
 const Customers = () => {
   const [customerId, setCustomerId] = useState("");
@@ -116,9 +117,11 @@ const Customers = () => {
                 setPhone(e.target.value);
               }}
               className="form-control mt-3"
-              type="text"
+              type="number"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               required
             />
+            <small>Format: 123-456-7890</small>
             {editMode ? (
               <input
                 type="submit"
@@ -145,7 +148,10 @@ const Customers = () => {
               </div>
             ) : list.length !== 0 ? (
               list.map((item) => (
-                <li className="list-group-item" key={item.id}>
+                <li
+                  className={`list-group-item ${classes.textBlack}`}
+                  key={item.id}
+                >
                   {item.name} - {item.phone}
                   <button
                     onClick={(id) => {
