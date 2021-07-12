@@ -1,3 +1,19 @@
-.textBlack {
+.customers {
+  margin: 2rem 10rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  flex: 1 1 160px;
+}
+
+.input {
+  color: #333;
+}
+
+.listItem {
+  background-color: #fff;
   color: #333;
 }

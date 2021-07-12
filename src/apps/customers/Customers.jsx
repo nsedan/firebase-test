@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { store } from "../../firebase/config";
-
 import classes from "./Customers.module.css";
 
 const Customers = () => {
@@ -91,10 +89,10 @@ const Customers = () => {
     }
   };
   return (
-    <div>
+    <div className={classes.customers}>
       <h1>Customers</h1>
-      <div className="row">
-        <div className="col-12 col-lg-6">
+      <div className={classes.row}>
+        <div className={classes.col}>
           <h2>Form</h2>
           <form
             onSubmit={editMode ? setUpdate : setCustomers}
@@ -106,7 +104,7 @@ const Customers = () => {
               onChange={(e) => {
                 setName(e.target.value);
               }}
-              className="form-control mt-3"
+              className={classes.input}
               type="text"
               required
             />
@@ -116,12 +114,12 @@ const Customers = () => {
               onChange={(e) => {
                 setPhone(e.target.value);
               }}
-              className="form-control mt-3"
-              type="number"
+              className={classes.input}
+              type="tel"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               required
             />
-            <small>Format: 123-456-7890</small>
+            <small>Format: 020-555-1495</small>
             {editMode ? (
               <input
                 type="submit"
@@ -139,7 +137,7 @@ const Customers = () => {
             )}
           </form>
         </div>
-        <div className="col-12 col-lg-6">
+        <div className={classes.col}>
           <h2>List</h2>
           <ul className="list-group">
             {isLoading ? (
@@ -148,10 +146,7 @@ const Customers = () => {
               </div>
             ) : list.length !== 0 ? (
               list.map((item) => (
-                <li
-                  className={`list-group-item ${classes.textBlack}`}
-                  key={item.id}
-                >
+                <li className={classes.listItem} key={item.id}>
                   {item.name} - {item.phone}
                   <button
                     onClick={(id) => {
@@ -177,9 +172,6 @@ const Customers = () => {
           </ul>
         </div>
       </div>
-      <Link className="btn btn-secondary btn-block mt-5" to="/">
-        Home
-      </Link>
     </div>
   );
 };
