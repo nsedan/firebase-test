@@ -124,14 +124,14 @@ const Customers = () => {
               <input
                 type="submit"
                 value="Save"
-                className="btn btn-dark btn-block mt-3"
+                className={classes.submitBtn}
                 disabled={isLoading && "disabled"}
               />
             ) : (
               <input
                 type="submit"
                 value="Submit"
-                className="btn btn-dark btn-block mt-3"
+                className={classes.submitBtn}
                 disabled={isLoading && "disabled"}
               />
             )}
@@ -139,30 +139,28 @@ const Customers = () => {
         </div>
         <div className={classes.col}>
           <h2>List</h2>
-          <ul className="list-group">
+          <ul className={classes.list}>
             {isLoading ? (
-              <div className="d-flex justify-content-center">
-                <div className="spinner-border text-light" role="status"></div>
-              </div>
+              <p>Loading...</p>
             ) : list.length !== 0 ? (
               list.map((item) => (
                 <li className={classes.listItem} key={item.id}>
                   {item.name} - {item.phone}
                   <button
                     onClick={(id) => {
-                      deleteCustomer(item.id);
+                      editCustomer(item.id);
                     }}
-                    className="btn btn-danger btn-sm float-right"
+                    className={classes.editBtn}
                   >
-                    X
+                    EDIT
                   </button>
                   <button
                     onClick={(id) => {
-                      editCustomer(item.id);
+                      deleteCustomer(item.id);
                     }}
-                    className="btn btn-info btn-sm float-right mr-2"
+                    className={classes.deleteBtn}
                   >
-                    EDIT
+                    X
                   </button>
                 </li>
               ))

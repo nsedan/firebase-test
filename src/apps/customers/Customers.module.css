@@ -1,19 +1,72 @@
 .customers {
-  margin: 2rem 10rem;
+  margin: 2rem 5rem;
 }
 .row {
   display: flex;
   flex-direction: row;
+  gap: 5rem;
 }
 .col {
   flex: 1 1 160px;
 }
 
 .input {
-  color: #333;
+  display: block;
+  color: black;
+  padding: 5px 15px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
 }
 
+.list {
+  list-style-type: none;
+  padding: 0;
+}
 .listItem {
   background-color: #fff;
-  color: #333;
+  color: black;
+  padding: 5px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.submitBtn {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  background-color: rgba(125, 125, 125, 1);
+  padding: 5px 15px;
+  transition: all 0.5s;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+}
+.submitBtn:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+.submitBtn:disabled {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+}
+
+.deleteBtn {
+  cursor: pointer;
+  transition: all 0.5s;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-color: rgb(209, 60, 44);
+  margin-left: 5px;
+  border-radius: 5px;
+}
+.editBtn {
+  cursor: pointer;
+  transition: all 0.5s;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-color: rgb(63, 163, 38);
+  margin-left: 15px;
+  border-radius: 5px;
+}
+.deleteBtn:hover,
+.editBtn:hover {
+  border-color: #fff;
 }
