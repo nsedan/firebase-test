@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import classes from "../ExpenseTracker.module.css";
 
 const IncomeExpenses = () => {
   const { transactions } = useContext(GlobalContext);
@@ -18,14 +19,14 @@ const IncomeExpenses = () => {
   ).toFixed(2);
 
   return (
-    <div className="inc-exp-container">
+    <div className={classes.expContainer}>
       <div>
         <h4>Income</h4>
-        <p className="money plus">+${income}</p>
+        <p className={`${classes.sums} ${classes.plus}`}>+${income}</p>
       </div>
       <div>
         <h4>Expense</h4>
-        <p className="money minus">-${expense}</p>
+        <p className={`${classes.sums} ${classes.minus}`}>-${expense}</p>
       </div>
     </div>
   );

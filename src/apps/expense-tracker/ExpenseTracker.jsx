@@ -9,10 +9,10 @@ import classes from "./ExpenseTracker.module.css";
 
 const ExpenseTracker = () => {
   return (
-    <div className={classes.tracker}>
+    <div className={classes.expenseTracker}>
       <GlobalProvider>
         <Header />
-        <div className={classes.trackerBox}>
+        <div className={classes.container}>
           <Balance />
           <IncomeExpenses />
           <TransactionList />

@@ -1,6 +1,6 @@
 .navBar {
   background-color: rgb(125, 125, 125);
-  padding: 15px;
+  padding: 15px 0;
   text-align: end;
   position: fixed;
   top: 0;
@@ -18,4 +18,8 @@
 
 .navLink:hover {
   border-color: rgba(255, 255, 255, 1);
+}
+
+.navLink:last-of-type {
+  margin-right: 1rem;
 }
