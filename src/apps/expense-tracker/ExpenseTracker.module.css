@@ -103,3 +103,42 @@
 .list li:hover .deleteBtn {
   opacity: 1;
 }
+
+.form {
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  margin: 15px 0;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  color: #333;
+}
+
+.submitBtn {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  background-color: rgba(125, 125, 125, 1);
+  padding: 5px 15px;
+  transition: all 0.5s;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.submitBtn:hover {
+  border-color: rgba(255, 255, 255, 1);
+}

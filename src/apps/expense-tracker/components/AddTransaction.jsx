@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import classes from "./AddTransaction.module.css";
+import classes from "../ExpenseTracker.module.css";
 
 const AddTransaction = () => {
   const [text, setText] = useState("");
