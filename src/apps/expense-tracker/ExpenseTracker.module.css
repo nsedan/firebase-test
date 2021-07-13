@@ -10,6 +10,10 @@
   width: 33%;
 }
 
+.header {
+  margin: 0 0 5px 0;
+}
+
 .expContainer {
   background-color: #fff;
   box-shadow: var(--box-shadow);
@@ -93,6 +97,7 @@
   transform: translate(-100%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 5px;
 }
 
 .list li:hover .deleteBtn {

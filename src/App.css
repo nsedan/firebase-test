@@ -3,6 +3,7 @@
 * {
   font-family: "Open Sans", sans-serif;
   color: #fff;
+  box-sizing: border-box;
 }
 
 body {

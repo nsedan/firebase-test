@@ -10,8 +10,8 @@ import classes from "./ExpenseTracker.module.css";
 const ExpenseTracker = () => {
   return (
     <div className={classes.expenseTracker}>
+      <Header />
       <GlobalProvider>
-        <Header />
         <div className={classes.container}>
           <Balance />
           <IncomeExpenses />

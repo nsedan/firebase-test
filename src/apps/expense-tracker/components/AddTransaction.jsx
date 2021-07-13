@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import classes from "./AddTransaction.module.css";
 
 const AddTransaction = () => {
   const [text, setText] = useState("");
@@ -21,13 +22,15 @@ const AddTransaction = () => {
   };
 
   return (
-    <>
+    <div className={classes.form}>
       <h3>Add new transaction</h3>
       <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label htmlFor="text">Text</label>
+        <div className={classes.inputGroup}>
+          <label className={classes.label} htmlFor="text">
+            Description
+          </label>
           <input
-            className="form-control"
+            className={classes.input}
             type="text"
             value={text}
             onChange={(e) => {
@@ -37,13 +40,13 @@ const AddTransaction = () => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className={classes.inputGroup}>
           <label htmlFor="amount">
             Amount <br />
             <small>(negative - expense, positive - income)</small>
           </label>
           <input
-            className="form-control"
+            className={classes.input}
             type="number"
             value={amount}
             onChange={(e) => {
@@ -53,9 +56,9 @@ const AddTransaction = () => {
             required
           />
         </div>
-        <button className="btn btn-dark btn-block">Add transaction</button>
+        <button className={classes.submitBtn}>Add transaction</button>
       </form>
-    </>
+    </div>
   );
 };
 
