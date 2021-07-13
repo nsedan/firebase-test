@@ -9,20 +9,22 @@ function App() {
   return (
     <>
       <NavBar />
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/customers" exact>
-          <Customers />
-        </Route>
-        <Route path="/expense-tracker" exact>
-          <ExpenseTracker />
-        </Route>
-        <Route path="/*" exact>
-          <Redirect to="/" />
-        </Route>
-      </Switch>
+      <main>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/customers" exact>
+            <Customers />
+          </Route>
+          <Route path="/expense-tracker" exact>
+            <ExpenseTracker />
+          </Route>
+          <Route path="/*" exact>
+            <Redirect to="/" />
+          </Route>
+        </Switch>
+      </main>
     </>
   );
 }

@@ -14,6 +14,9 @@ h1 {
 }
 
 html {
-  height: 100%;
-  background: radial-gradient(ellipse at bottom, #0254a5 0%, #00356b 100%);
+  background: #00356b;
+}
+
+main {
+  margin-top: 5rem;
 }
