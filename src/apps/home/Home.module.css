@@ -1,21 +1,35 @@
 .container {
   margin: 2rem 10rem;
 }
-/* 
-.btn {
-  background-color: rgb(125, 125, 125);
-  margin: 5px;
-  padding: 5px 10px;
-  border: 2px solid rgba(0, 0, 0, 0);
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.5s;
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
 }
-.btn:hover {
-  border-color: rgba(255, 255, 255, 1);
+
+.cardContent {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  padding: 3rem 4rem;
+  text-align: end;
 }
-.btnBlock {
-  display: block;
-} */
+
+.cardBody {
+  flex: 2 1 0;
+}
+
+.cardBody h3 {
+  margin: 0;
+}
+
+.cardImg {
+  flex: 1 1 0;
+}
+
+.img {
+  width: 100%;
+  border-radius: 100%;
+}
